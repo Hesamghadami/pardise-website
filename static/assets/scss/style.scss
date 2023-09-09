@@ -1,0 +1,358 @@
+@import "base/fonts";
+@import "base/variables";
+@import "pages/homepage";
+@import "pages/inner-pages";
+
+body {
+  font-family: 'vazir-fd';
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+  transition: .3s;
+
+  &:hover {
+    color: #eeab33;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Owl Carousel */
+.owl-carousel {
+
+  .owl-nav {
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    margin-top: -34px;
+    left: 0;
+    margin-left: 17px;
+
+    button {
+      padding-right: 12px !important;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+/* /Owl Carousel */
+
+/* Boxes */
+.product-box {
+  min-height: 340px;
+  background-color: white;
+  border: 2px solid $lightgray;
+  border-radius: $min-radius;
+  margin: 10px 0;
+
+  &:hover {
+
+    .icons .btn {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    .icons .btn:nth-child(2) {
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s;
+    }
+
+    .icons .btn:nth-child(3) {
+      -webkit-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+
+    .details {
+      background-color: ghostwhite;
+      transition: .3s;
+    }
+
+    .image {
+      opacity: .8;
+      transition: all 1s ease-out;
+    }
+
+    .on-sale-badge {
+      background-color: rgba(239, 131, 123, 1);
+    }
+  }
+
+  h2 {
+    font-family: 'vazir-bold-fd';
+    font-size: 16px;
+    color: $text-color;
+    line-height: 23px;
+    padding-top: 10px;
+    min-height: 56px;
+    transition: .2s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .icons {
+    position: absolute;
+    margin-top: -180px;
+    padding: 6px 7px;
+    text-align: center;
+
+    .btn {
+      display: block;
+      padding: 16px;
+      margin: 5px;
+      background: $lightgray;
+      border: 1px solid lightgray;
+      border-radius: 3px;
+      text-align: center;
+      color: #000000;
+      opacity: 0;
+      transition: .3s;
+
+      &:hover {
+        background-color: $primary;
+        color: #ffffff;
+        cursor: pointer;
+        transition: .3s;
+      }
+
+      &.btn-favorite {
+        background-image: url('../images/icons/favorite.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      &.btn-compare {
+        background-image: url('../images/icons/compare.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+
+  .image {
+    height: 180px;
+    border-bottom: 2px solid $lightgray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 1s ease-out;
+
+    .on-sale-badge {
+      font-family: 'vazir-light-fd';
+      color: white;
+      background-color: rgba(239, 131, 123, .8);
+      margin: 10px;
+      transition: .2s;
+    }
+  }
+
+  .category {
+    font-family: 'vazir-light-fd';
+    font-size: 11px;
+
+    a {
+      color: $text-color;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  .discounted {
+    font-size: .8em;
+    color: dimgray;
+    text-decoration: line-through;
+  }
+
+  .price {
+    font-family: 'vazir-bold-fd';
+    color: $primary;
+  }
+
+  .rate {
+    padding-top: 5px;
+
+    svg {
+      font-size: 13px;
+      color: $primary;
+    }
+
+    .reviews {
+      font-family: 'vazir-light-fd';
+      font-size: 11px;
+    }
+  }
+}
+
+.product-box-row {
+  background-color: white;
+  border: 2px solid $lightgray;
+  border-radius: $min-radius;
+  margin: 10px 0;
+
+  .image {
+
+    .on-sale-badge {
+      font-family: 'vazir-light-fd';
+      color: white;
+      background-color: rgba(239, 131, 123, .8);
+      margin: 10px;
+      transition: .2s;
+    }
+  }
+
+  &:hover {
+
+    .details {
+      background-color: ghostwhite;
+      transition: .3s;
+    }
+
+    .image {
+      opacity: .8;
+      transition: all 1s ease-out;
+    }
+
+    .on-sale-badge {
+      background-color: rgba(239, 131, 123, 1);
+    }
+  }
+
+  h2 {
+    font-family: 'vazir-bold-fd';
+    font-size: 16px;
+    color: $text-color;
+    line-height: 23px;
+    padding-top: 10px;
+    transition: .2s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  p {
+    font-family: 'vazir-light-fd' !important;
+    font-size: 14px !important;
+  }
+
+  .image {
+    min-height: 230px;
+    height: 100%;
+    border: 2px solid $lightgray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 1s ease-out;
+  }
+
+  .category {
+    font-family: 'vazir-light-fd';
+    font-size: 11px;
+
+    a {
+      color: $text-color;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  .discounted {
+    font-size: .8em;
+    color: dimgray;
+    text-decoration: line-through;
+  }
+
+  .price {
+    font-family: 'vazir-bold-fd';
+    color: $primary;
+  }
+
+  .rate {
+    padding-bottom: 5px;
+
+    svg {
+      font-size: 13px;
+      color: $primary;
+    }
+
+    .reviews {
+      font-family: 'vazir-light-fd';
+      font-size: 11px;
+    }
+  }
+}
+
+.blog-post-box {
+
+  &:hover {
+    .post-image {
+      opacity: .7;
+      transition: all 1s ease-out;
+    }
+  }
+
+  .post-image {
+    width: 100%;
+    height: 220px;
+    border-radius: $min-radius;
+    background-color: lightgray;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s ease-out;
+  }
+
+  .post-date {
+    font-family: 'vazir-light-fd';
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .post-title {
+    font-size: 18px;
+    color: $text-color;
+    text-align: center;
+    line-height: 28px;
+    padding-top: 4px;
+    transition: .3s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .post-description {
+    font-family: 'vazir-light-fd';
+    color: $text-color;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .read-more {
+    color: $primary;
+    font-size: 14px;
+    text-align: center;
+    padding: 7px 0;
+
+    svg {
+      font-size: 10px;
+    }
+  }
+}
+/* /Boxes */
