@@ -25,7 +25,7 @@ class CustumUser(AbstractUser):
     melicode = models.CharField(max_length=10, null= True, blank = True)
     credit_number = models.CharField(max_length=16, null= True, blank=True)
     is_custumUser = models.BooleanField(default=False) 
-    addresses = models.ManyToManyField(Address)
+    addresses = models.ForeignKey(Address, on_delete= models.CASCADE)
     def __str__(self):
         return self.username
     

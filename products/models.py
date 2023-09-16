@@ -39,6 +39,46 @@ class Post(models.Model):
         ordering = ('-created_date',)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+class Comments(models.Model):
+    which_post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    message = models.TextField()
+    status = models.BooleanField(default=False)
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ("-created_date",)
+
+    def __str__(self):
+        return self.name
+    
+
+
+class Replay(models.Model):
+    which_comment = models.ForeignKey(Comments, on_delete=models.CASCADE)
+    message = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ("-created_date",)
+
+    def __str__(self):
+        return str(self.which_comment)
+
+
 # Create your models here.
 
 
