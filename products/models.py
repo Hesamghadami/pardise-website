@@ -26,7 +26,6 @@ class Post(models.Model):
     image6 = models.ImageField(upload_to= 'blog', null= True, blank= True)
     published_date = models.DateField()
     created_date = models.DateTimeField(auto_now_add=True)
-    updated_date = models.DateTimeField(auto_now_add=True)
     counted_views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     status = models.BooleanField(default=False)
