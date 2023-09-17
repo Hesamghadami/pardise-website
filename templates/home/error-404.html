@@ -14,7 +14,7 @@
                             <p>صفحه مورد نظر شما حذف شده یا اصلا وجود نداشته است!</p>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="./index.html">صفحه نخست</a></li>
+                                    <li class="breadcrumb-item"><a href="{% url "home:home" %}">صفحه نخست</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">خطای 404</li>
                                 </ol>
                             </nav>
@@ -44,7 +44,7 @@
                                     </div>
                                     <h2>صفحه مورد نظر یافت نشد!</h2>
                                     <p>احتمالا صفحه مورد نظر شما حذف یا تغییر نام داده شده است.</p>
-                                    <a href="./index.html">بازگشت به صفحه اصلی</a>
+                                    <a href="{% url "home:home" %}">بازگشت به صفحه اصلی</a>
                                     <div class="notfound-social">
                                         <a href="#"><img src="{% static 'asssets/images/social/twitter.png' %}" alt="توئیتر" width="18px"></a>
                                         <a href="#"><img src="{% static 'asssets/images/social/insta.png' %}" alt="اینستاگرام" width="18px"></a>

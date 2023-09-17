@@ -130,22 +130,22 @@
             <div class="col-6 col-sm-4 col-lg-2">
                 <div class="title">دسترسی سریع</div>
                 <ul>
-                    <li><a href="./blog.html">بلاگ آموزشی</a></li>
-                    <li><a href="./faq.html">راهنمای خرید</a></li>
-                    <li><a href="./faq.html">شیوه های پرداخت</a></li>
-                    <li><a href="./contact.html">پیگیری سفارش</a></li>
-                    <li><a href="./faq.html">سوالات متداول</a></li>
-                    <li><a href="./about.html">درباره ما</a></li>
-                    <li><a href="./contact.html">تماس با ما</a></li>
+
+                    <li><a href="{% url "home:faq" %}">راهنمای خرید</a></li>
+                    <li><a href="{% url "home:faq" %}">شیوه های پرداخت</a></li>
+                    <li><a href="{% url "home:contact" %}">پیگیری سفارش</a></li>
+                    <li><a href="{% url "home:faq" %}">سوالات متداول</a></li>
+                    <li><a href="{% url "home:about" %}">درباره ما</a></li>
+                    <li><a href="{% url "home:contact" %}">تماس با ما</a></li>
                 </ul>
             </div>
             <div class="col-6 col-sm-4 col-lg-2">
                 <div class="title">گروه های محصولات</div>
                 <ul>
-                    <li><a href="./products.html">تجهیزات کامپیوتر</a></li>
-                    <li><a href="./products.html">گوشی موبایل</a></li>
-                    <li><a href="./products.html">جانبی موبایل</a></li>
-                    <li><a href="./products.html">ساعت هوشمند</a></li>
+                    <li><a href="./products.html">تیشرت</a></li>
+                    <li><a href="./products.html">شلوارک</a></li>
+                    <li><a href="./products.html">مانتو</a></li>
+                    <li><a href="./products.html">تاپ</a></li>
                     <li><a href="./products.html">جانبی کامپیوتر</a></li>
                     <li><a href="./products.html">دوربین</a></li>
                     <li><a href="./products.html">لپ تاپ</a></li>
@@ -163,7 +163,7 @@
             </div>
             <div class="col-12 col-md-12 col-lg-6">
                 <hr class="d-lg-none">
-                <img src="{% static 'assets/images/logo.png' %}" alt=""> روبیک مارکت
+                <img src="{% static 'assets/images/logo.png' %}" alt=""> پوشاک پیمان
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
                 <div class="row">
                     <div class="col-12 col-md-6 text-center p-2" id="support-info">

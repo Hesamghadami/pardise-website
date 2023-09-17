@@ -27,6 +27,7 @@ class Post(models.Model):
     published_date = models.DateField()
     created_date = models.DateTimeField(auto_now_add=True)
     counted_views = models.IntegerField(default=0)
+    sells = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     status = models.BooleanField(default=False)
     category = models.ManyToManyField(Category)
